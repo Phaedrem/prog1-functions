@@ -1,8 +1,8 @@
-#
-# 
-# your comment header here
-# 
-# 
+######################
+# Name: Darren Bowers
+# Coding 06
+# Purpose: Assignment for writing functions to work with Numpy arrays.
+######################
 
 # import libraries you will need
 import functions as fn
