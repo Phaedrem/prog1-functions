@@ -15,7 +15,6 @@ import numpy as np
 import random
 
 def make_array():
-    random_num = random.randint(MIN,MAX)
     if isinstance(SIZE, int):
         array = np.array([0] * SIZE, dtype=int)
         for i in range(SIZE):
@@ -34,6 +33,9 @@ def total(nums):
     return int(total_numbers)
 
 def average(nums):
+    #needs a validation step
+    #average_numbers = float(total(nums))/float(SIZE)
+    #return float(average_numbers)
     # this will accept a Numpy integer array
     # find the average of the array by calling total() and dividing by SIZE
     # you may not use the Numpy average function or anything similar
