@@ -7,7 +7,7 @@
 # SIZE is a global constant, use this throughout your program.
 # you should be able to change this to any integer > 0 and your
 # whole program will still work correctly. TEST THIS!
-SIZE = 9
+SIZE = 10
 MIN = 10
 MAX = 100
 
@@ -35,19 +35,12 @@ def minimum(nums):
     for i in range(1, SIZE):
         if nums[i] < minimum: minimum = nums[i]
     return minimum
-        
-    # this will accept a Numpy integer array
-    # find the minimum of the array USING A LOOP and return it
-    # you may not use the Numpy min function or anything similar
-    # return the minimum as an integer
-    pass
 
 def maximum(nums):
-    # this will accept a Numpy integer array
-    # find the maximum of the array USING A LOOP and return it
-    # you may not use the Numpy max function or anything similar
-    # return the maximum as an integer
-    pass
+    maximum = nums[0]
+    for i in range(1, SIZE):
+        if nums[i] > maximum: maximum = nums[i]
+    return maximum
 
 def reverse_array(arr):
     # this will accept a Numpy integer array
