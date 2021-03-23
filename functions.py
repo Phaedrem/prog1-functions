@@ -25,14 +25,15 @@ def make_array():
     return array
     
 def total(nums):
-    #needs a validation step
-    total_numbers = 0
-    for i in range(SIZE):
+    if all(nums > 0):
+        total_numbers = 0
+        for i in range(SIZE):
             total_numbers += nums[i]
+    else:
+        total_numbers = 0
     return int(total_numbers)
 
 def average(nums):
-    
     # this will accept a Numpy integer array
     # find the average of the array by calling total() and dividing by SIZE
     # you may not use the Numpy average function or anything similar
