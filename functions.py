@@ -8,8 +8,6 @@
 # you should be able to change this to any integer > 0 and your
 # whole program will still work correctly. TEST THIS!
 SIZE = 10
-MIN = 10
-MAX = 100
 
 import numpy as np
 import random
@@ -17,7 +15,7 @@ import random
 def make_array():
     array = np.array([0] * SIZE, dtype=int)
     for i in range(SIZE):
-        array[i] = random.randint(MIN,MAX)
+        array[i] = random.randint(10,100)
     return array
     
 def total(nums):
@@ -43,10 +41,7 @@ def maximum(nums):
     return maximum
 
 def reverse_array(arr):
-    # this will accept a Numpy integer array
-    # do NOT alter the array passed in. use it as-is
-    # put the numbers from arr in another array in reverse order
-    # you MUST use a loop to do this
-    # return the reversed array
-    pass
-
+    array = np.array([0] * SIZE, dtype=int)
+    for i in range(SIZE):
+        array[SIZE -(i+1)] = arr[i]
+    return array
