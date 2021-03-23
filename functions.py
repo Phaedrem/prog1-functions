@@ -33,17 +33,18 @@ def total(nums):
     return int(total_numbers)
 
 def average(nums):
-    #needs a validation step
-    #average_numbers = float(total(nums))/float(SIZE)
-    #return float(average_numbers)
-    # this will accept a Numpy integer array
-    # find the average of the array by calling total() and dividing by SIZE
-    # you may not use the Numpy average function or anything similar
-    # return the average as a float which has ensures pure float
-    # calculations and guarantees maximum precision
-    pass
+    if total(nums) > 0:
+        average_numbers = float(total(nums))/float(SIZE)
+    else:
+        average_numbers = 0
+    return float(average_numbers)
 
 def minimum(nums):
+    minimum = nums[0]
+    for i in range(1, SIZE):
+        if nums[i] < minimum: minimum = nums[i]
+    return minimum
+        
     # this will accept a Numpy integer array
     # find the minimum of the array USING A LOOP and return it
     # you may not use the Numpy min function or anything similar
