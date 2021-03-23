@@ -8,22 +8,22 @@
 # you should be able to change this to any integer > 0 and your
 # whole program will still work correctly. TEST THIS!
 SIZE = 10
+MIN = 10
+MAX = 100
 
 import numpy as np
 import random
 
 def make_array():
-    numbers = np.array([0] * SIZE, dtype=int)
-    for i in range(SIZE):
-        numbers[i] = (i+1)*10
-    return numbers
+    random_num = random.randint(MIN,MAX)
+    if isinstance(SIZE, int):
+        array = np.array([0] * SIZE, dtype=int)
+        for i in range(SIZE):
+            array[i] = random.randint(MIN,MAX)
+    else:
+        array = 0
+    return array
     
-
-    # create a numpy array of size SIZE filled with 0s.
-    # fill it random numbers 10-100 (inclusive) USING A LOOP
-    # return it
-    pass
-
 def total(nums):
     # this will accept a Numpy integer array
     # find the total of the elements of the array USING A LOOP
